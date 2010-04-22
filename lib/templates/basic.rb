@@ -41,9 +41,9 @@ class Basic < Gamercard::Template
   def generate(username, stats={})
     @username = username
     @filename = "#{username}.png"
-    @stats = stats
-    @d = Draw.new
-    @base = gradient_background # uses the template helper with default values
+    @stats    = stats
+    @d        = Draw.new
+    @base     = gradient_background # uses the template helper with default values
     username_label
     @generated = true
   end

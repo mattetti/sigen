@@ -1,6 +1,5 @@
 require_relative 'gamercard'
 require_relative 'template'
-require 'yaml'
 
 class Gamercard
   class Templater  
@@ -9,9 +8,9 @@ class Gamercard
   
     # Pass an optional template path in the option hash to use a custom path.
     def initialize(template_data)
-      template_path = template_data.delete('template_path')
+      template_path   = template_data.delete('template_path')
       @templates_path = template_path || File.expand_path(File.join(File.dirname(__FILE__), 'templates'))
-      @template = load_template(template_data)
+      @template       = load_template(template_data)
       self
     end
   
