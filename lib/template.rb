@@ -33,7 +33,7 @@ class Gamercard
     end
     
     def gradient_background(top_color='#4a465a', bottom_color='black')
-      Image.new(@columns, @rows, GradientFill.new(0, 0, 100, 0, top_color, bottom_color))
+      Image.new(width, height, GradientFill.new(0, 0, width, 0, top_color, bottom_color))
     end
     
   end
